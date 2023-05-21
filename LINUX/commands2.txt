@@ -1,0 +1,141 @@
+root & non root :
+sudo -i		: to change to root user
+in linux we need to use CLI 
+CLI : Command line interface
+
+file commands:
+touch 		   	: to create a file
+ls					  : to list the file  (short list)
+ll					  : to list the file  (long list)
+ls -a				: to see the hidden files (start with .)
+ll -a				: to see the hidden files (start with .)
+more 				: to see the content of a file
+cat 				  : to see the content of a file
+cat>file1		: to insert the content (first time)
+ctrl + d 		: to save the content of file
+cat>>file1		: to insert the content (second time + ....)
+clear/ctrll :  to clear the sceern
+
+======================================================================================================================================================
+cp 					  : to copy content form one file to another file
+mv					  : to move content form one file to another file
+mv					  : to rename a file
+rm 					  : to remove a file
+rm -f				  : to remove a file forcefully
+rm -f *			  : to remove all files forecfully
+rm -f p*			  : to remove all files forecfully starting with p
+touch file{1..10} : to create multiple files in a pattren
+
+
+
+in linux folder is also called as directory.
+
+mkdir 			: to create a dir
+pwd				: to print/present working directory
+cd 				: to change directory
+cd ..			: to get one dir back
+cd ../../	   : to get two dir back
+cd	 -			: to go to previous dir
+
+
+
+head			: to print the top 10 lines
+head -5		: to print the top 5 lines
+head -12		: to print the top 12 lines
+tail			: to print the bottom 10 lines
+tail -5		: to print the bottom 5 lines
+tail -12		: to print the bottom 12 lines
+wc				: to print lines, words and char
+sed -n '4,12p' file1  : to print line number 4 to 12
+
+
+======================================================================================================================================================
+
+DAY-02:
+
+VIM EDITOR: To edit the files
+i	 = used to insert the content
+ecs	 = to get out of insert mode
+
+WE HAVE 3 MODES:
+
+3. SAVE MODE
+:w	:	save
+:q	:	quit
+:wq	:	save and exit
+:w!	:	forcefully save
+:q!	:	forcefully quit
+:wq!	:	forcefully save and exit 
+
+
+2. INSERT MODE
+i	:	It will insert the data 
+I	:	Moves to beginning of the line
+A	:	moves to the end of the line
+o	:	moves down to that line
+O	:	moves up to that line
+
+
+1. COMMAND MODE
+gg	:	top of the file
+shift+g	:	bottom of the file
+yy	:	copies single line
+3yy	:	copies 3 lines
+p	:	paste the copied line
+3p	:	paste the copied line for 3 times
+dd	:	deletes the line
+3dd	:	deletes three lines
+u	:	undo
+/word	:	finds the particular word
+:set number:	To set the numbers in line
+:83	:	To go to 83rd line
+
+
+
+
+-rw-r--r-- 1 root root 0 Apr  7 16:15 file1
+
+FILE TYPES:
+
+-			: Regular file
+b			: blocked file
+c       : charcter file
+d			: directory
+l			: link file
+
+
+PERMISSIONS: (rw-r--r--)
+
+Types of permissions: 3 types
+
+Read				:	 r		: 4
+Write				:   w		: 2
+Executable	   :   x		: 1
+
+Categories:
+
+User
+Group
+Others
+
+Methods to change permissions:
+
+numerical method: chmod 777 file1
+alphabetical method: chmod u=rwx,g=rx,o=rw file1
+
+==============================================================
+
+useradd raham 		: to create a user
+cat /etc/passwd 		: to check user list
+getent passwd			: to check user list
+cat /etc/group 		: to check groups list
+getent group			: to check user list
+cd /home/				: to check the user directory
+chown raham file1  : to change the ownership 
+chgrp raham file1  : to change the group
+chown raham:raham file2 : to chnage ownership and group at same time
+usermod -aG devops raham : to add user to groups
+
+
+
+
