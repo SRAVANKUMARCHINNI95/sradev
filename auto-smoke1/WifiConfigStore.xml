@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<WifiConfigStoreData>
+<int name="Version" value="3" />
+<NetworkList>
+<Network>
+<WifiConfiguration>
+<string name="ConfigKey">&quot;INNOMINDS-CORPORATE&quot;WPA_EAP</string>
+<string name="SSID">&quot;INNOMINDS-CORPORATE&quot;</string>
+<null name="BSSID" />
+<boolean name="ShareThisAp" value="false" />
+<null name="PreSharedKey" />
+<null name="WEPKeys" />
+<int name="WEPTxKeyIndex" value="0" />
+<boolean name="HiddenSSID" value="false" />
+<boolean name="RequirePMF" value="false" />
+<byte-array name="AllowedKeyMgmt" num="1">0c</byte-array>
+<byte-array name="AllowedProtocols" num="1">03</byte-array>
+<byte-array name="AllowedAuthAlgos" num="1">01</byte-array>
+<byte-array name="AllowedGroupCiphers" num="1">2f</byte-array>
+<byte-array name="AllowedPairwiseCiphers" num="1">0e</byte-array>
+<byte-array name="AllowedGroupMgmtCiphers" num="0"></byte-array>
+<byte-array name="AllowedSuiteBCiphers" num="1">01</byte-array>
+<boolean name="Shared" value="true" />
+<int name="Status" value="2" />
+<null name="FQDN" />
+<null name="ProviderFriendlyName" />
+<null name="LinkedNetworksList" />
+<string name="DefaultGwMacAddress">94:3f:c2:4c:19:04</string>
+<boolean name="ValidatedInternetAccess" value="true" />
+<boolean name="NoInternetAccessExpected" value="false" />
+<int name="UserApproved" value="0" />
+<boolean name="MeteredHint" value="false" />
+<int name="MeteredOverride" value="0" />
+<boolean name="UseExternalScores" value="false" />
+<int name="NumAssociation" value="13" />
+<int name="CreatorUid" value="1000" />
+<string name="CreatorName">android.uid.system:1000</string>
+<string name="CreationTime">time=06-13 09:18:57.653</string>
+<int name="LastUpdateUid" value="1000" />
+<string name="LastUpdateName">android.uid.system:1000</string>
+<int name="LastConnectUid" value="1000" />
+<boolean name="IsLegacyPasspointConfig" value="false" />
+<long-array name="RoamingConsortiumOIs" num="0" />
+<string name="RandomizedMacAddress">2a:08:d6:dd:25:f2</string>
+<int name="MacRandomizationSetting" value="1" />
+<null name="DppConnector" />
+<null name="DppNetAccessKey" />
+<int name="DppNetAccessKeyExpiry" value="-1" />
+<null name="DppCsign" />
+</WifiConfiguration>
+<NetworkStatus>
+<string name="SelectionStatus">NETWORK_SELECTION_ENABLED</string>
+<string name="DisableReason">NETWORK_SELECTION_ENABLE</string>
+<null name="ConnectChoice" />
+<long name="ConnectChoiceTimeStamp" value="-1" />
+<boolean name="HasEverConnected" value="true" />
+</NetworkStatus>
+<IpConfiguration>
+<string name="IpAssignment">DHCP</string>
+<string name="ProxySettings">NONE</string>
+</IpConfiguration>
+<WifiEnterpriseConfiguration>
+<string name="Identity">nvanukuri</string>
+<string name="AnonIdentity"></string>
+<string name="Password">Burnit@a11</string>
+<string name="ClientCert"></string>
+<string name="CaCert"></string>
+<string name="SubjectMatch"></string>
+<string name="Engine">0</string>
+<string name="EngineId"></string>
+<string name="PrivateKeyId"></string>
+<string name="AltSubjectMatch"></string>
+<string name="DomSuffixMatch"></string>
+<string name="CaPath"></string>
+<int name="EapMethod" value="0" />
+<int name="Phase2Method" value="3" />
+<string name="PLMN"></string>
+<string name="Realm"></string>
+<string name="SimNum"></string>
+</WifiEnterpriseConfiguration>
+</Network>
+</NetworkList>
+<MacAddressMap>
+<map name="MacMapEntry" />
+</MacAddressMap>
+<PasspointConfigData>
+<long name="ProviderIndex" value="0" />
+</PasspointConfigData>
+</WifiConfigStoreData>

@@ -1,0 +1,95 @@
+#****************************************************************************************************************************************************
+# * Copyright (C) 1998-2016 Connected Devices, Innominds Software Inc.
+# *
+# * This file is part of Connected Devices Project
+# *
+# * Connected Devices Project and associated code can not be copied
+# * and/or distributed without the express permission of
+# * Innominds Software Inc. and/or it subsidiaries
+# *
+# * Description: This script loads the build images into the target
+# * For any modification contact @Ramamohan (rbandapalli@innominds.com)
+#*****************************************************************************************************************************************************
+
+#!/usr/bin/perl
+
+=pod
+my $lresult = "FAILED";
+my $find;
+sub buildflashing
+{
+   my $build_path = "/home/sravankumarchinni/Desktop/Androidkernel/Builds/DBG_LA1.0_Landscape/";
+   print "Build loading from $build_path \n";
+   my $retValue;
+   if( -f "$build_path/boot.img" && -f "$build_path/system.img" && -f "$build_path/userdata.img" && -f "$build_path/emmc_appsboot.mbn")
+   {
+      $retValue = `adb wait-for-device reboot bootloader`;
+      $retValue = `fastboot flash aboot  $build_path/emmc_appsboot.mbn`;
+      if ($retValue)
+      {
+         print ("Unable to flash emmc_appsboot image\n");
+         exit();
+      }
+      $retValue = `fastboot flash boot $build_path/boot.img`;
+      if ($retValue)
+      {
+         print ("Unable to flash boot image\n");
+         exit();
+      }
+      $retValue = `fastboot flash system $build_path/system.img`;
+      if ($retValue)
+      {
+         print ("Unable to flash system image\n");
+         exit();
+      }
+      $retValue = `fastboot flash userdata $build_path/userdata.img`;
+      if ($retValue)
+      {
+         print ("Unable to flash userdata image\n");
+         exit();
+      } 
+      system("fastboot erase config");
+      sleep(60);
+      system("fastboot reboot");
+      #system("adb reboot");
+      system("adb wait-for-device devices");
+      my $time1 = `date | cut -d ' ' -f4`;
+      my $ret = `adb logcat | grep -m1 "BOOT_COMPLETED"`;
+      print  $ret;
+      if ($ret=~m/BOOT_COMPLETED/){
+                  $lresult = "PASSED";
+                 return $lresult;
+      }
+    }
+   else
+   {
+      print "Build images are not presented";
+      $lresult = "FAILED";
+   }
+   return $lresult;
+}
+1;
+=cut
+
+
+
+my $shell_script = '/home/sravankumarchinni/Desktop/Androidkernel/Builds/DBG_LA1.0_Landscape/flash_all.sh';
+
+
+sub buildflashing
+	{
+	# Run the shell script
+	my $exit_status = system($shell_script);
+
+	# Check the exit status and set variables accordingly
+	if ($exit_status == 0) {
+	print "Shell script passed\n";
+	$lresult  = "passed";
+	# Do something with the 'passed' status
+	} else {
+	print "Shell script failed\n";
+     $lresult = "FAILED";
+   }
+   return $lresult;
+}
+1;

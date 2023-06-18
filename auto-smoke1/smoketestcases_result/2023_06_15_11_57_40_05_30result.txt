@@ -1,0 +1,7 @@
+Buildnumber : 
+1. Build Flash - passed 
+2. Boot Version Check - PASSED 
+3. Adb enumeration Test - PASSED 
+4. Home Screen Test - PASSED 
+5. Display Check - PASSED 
+6. Battery Test - PASSED 
